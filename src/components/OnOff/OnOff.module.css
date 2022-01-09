@@ -1,0 +1,41 @@
+.cub {
+    display: flex;
+}
+
+.on {
+    margin-left: 20px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.on:hover {
+    background-color: #29b92d;
+    cursor: pointer;
+}
+
+
+.off {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.off:hover {
+    background-color: brown;
+    cursor: pointer;
+}
+
+.lamp1 {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+
+}
