@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import s from "./Select.module.css"
 
 type  ItemsType = {
     title: string
@@ -11,15 +12,27 @@ type SelectPropsType = {
 }
 
 function Select(props: SelectPropsType) {
-let [collapsed, setCollapsed]=useState(false)
-    return <div>
-       <div onClick={()=>setCollapsed(!collapsed)}>{props.value}</div>
-            {collapsed && props.items.map((i, index) => <div
-                key={index}
-                onClick={() => {props.onClick(i.title)}}>
-                {i.title}</div>)}
+    let [collapsed, setCollapsed] = useState(false)
+    let toggle = () => {
+        setCollapsed(!collapsed)
+    }
+    let selectedItem = props.items.find(i => i.value === props.value)
+    let onItemClick = (value: string) => {
+        props.onClick(value)
+        setCollapsed(!collapsed)
+    }
+    return <div className={s.select}>
+        <div className={s.name} onClick={toggle}>{selectedItem && selectedItem.title} {collapsed ? '^' : "v"}</div>
+        <div className={s.items}> {collapsed && props.items.map((i, index) => <div
+            className={s.collapsed}
+            key={index}
+            onClick={() => {
+                onItemClick(i.value)
+            }}>
+            {i.title}</div>)}</div>
     </div>
 }
+
 export default Select
 
 

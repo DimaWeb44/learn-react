@@ -9,10 +9,10 @@ import Select from "./components/Select/Select";
 
 
 function App() {
-    let users = [{title:'Dima', value:1}, {title:'Max', value:2},{title:'Oleg', value:3},{title:'Valera', value:4}]
+    let users = [{title:'Dima', value:'1'}, {title:'Max', value:'2'},{title:'Oleg', value:'3'},{title:'Valera', value:'4'}]
     let [value, setValue] = useState(0)
-    let [select, setSelect] = useState('Select')
-    const onClickSelect = (title:string) => setSelect(title)
+    let [select, setSelect] = useState('1')
+    const onClickSelect = (value:string) => setSelect(value)
     let valueRating = [1,2,3,4,5]
     const click = () => setCollapsed(!collapsed)
     let [collapsed, setCollapsed] = useState(false);
@@ -25,13 +25,6 @@ function App() {
             <Select value={select} items={users} onClick={onClickSelect}/>
         </div>
     );
-}
-
-type PageTitlePropsType = {
-    title: string
-}
-function PageTitle (props: PageTitlePropsType){
-    return <h1>{props.title}</h1>;
 }
 
 export default App;

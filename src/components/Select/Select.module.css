@@ -1,0 +1,38 @@
+.select {
+
+}
+
+
+.name {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: darkgrey;
+    border-radius: 5px;
+    border: 1px black solid;
+    margin-top: 10px;
+    padding: 3px;
+    width: 100px;
+    height: 30px;
+    align-content: center;
+}
+
+.items {
+    position: absolute;
+
+
+}
+
+.collapsed {
+    cursor: pointer;
+    border: 1px black solid;
+    border-radius: 5px;
+    background-color: darkgrey;
+    padding: 3px;
+    width: 100px;
+
+}
+
+.collapsed:hover {
+    background-color: #4268b0;
+}
