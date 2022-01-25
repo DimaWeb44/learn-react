@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import {AccordionTitle} from "./AccordionTitle";
 import {AccordionBody, ItemsType} from "./AccordionBody";
 
@@ -9,6 +9,7 @@ type AccordionPropsType = {
     items: ItemsType[]
     onClick: (value: any) => void
 }
+
 
 
 
