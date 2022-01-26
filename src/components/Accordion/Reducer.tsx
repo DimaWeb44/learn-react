@@ -6,6 +6,7 @@ export type ActionType = {
  export type StateType = {
     collapsed: boolean
 }
+
 export const reducer = (state: StateType, action: ActionType):StateType => {
     switch (action.type) {
         case 'CHANGE-SATE':

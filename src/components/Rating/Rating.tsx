@@ -3,8 +3,8 @@ import React, {useState} from "react";
 // type RatingPropsType = {
 //     value: number
 // }
-
-export function Rating(props: any) {
+export const Rating = React.memo(SecretRating)
+function SecretRating(props: any) {
 
     return (
         <div>

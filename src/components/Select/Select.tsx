@@ -10,8 +10,8 @@ type SelectPropsType = {
     items: ItemsType[]
     onClick: (value: any) => void
 }
-
-function Select(props: SelectPropsType) {
+const Select = React.memo(SecretSelect)
+function SecretSelect(props: SelectPropsType) {
     let [collapsed, setCollapsed] = useState(false)
     let toggle = () => {
         setCollapsed(!collapsed)

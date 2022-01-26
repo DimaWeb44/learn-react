@@ -10,8 +10,8 @@ type AccordionPropsType = {
     items: ItemsType[]
     onClick: (value: any) => void
 }
-
-function Accordion(props: AccordionPropsType) {
+const Accordion = React.memo(SecretAccordion)
+function SecretAccordion(props: AccordionPropsType) {
     let [state, dispatch] = useReducer(reducer,{collapsed: false});
     return (<div>
         <AccordionTitle title={props.titleValue} click={()=>dispatch({type:'CHANGE-SATE'})}/>

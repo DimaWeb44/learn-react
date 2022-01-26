@@ -3,15 +3,11 @@ import s from './OnOff.module.css'
 
 
 
-//type PropsType = {
-//    on: boolean
-//}
+/*type PropsType = {
+   on: boolean
+}*/
 
-
-
-const OnOff = (props: any) => {
-
-
+export const OnOff = (props: any) => {
     const lampStyle ={
 
         backgroundColor: props.on ? "#29b92d" : "brown"
@@ -33,4 +29,3 @@ const OnOff = (props: any) => {
 }
 
 
-export default OnOff
