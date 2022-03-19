@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
+import { Clock } from './components/Clock/Clock';
 import {OnOff} from './components/OnOff/OnOff'
 import {Rating} from "./components/Rating/Rating";
 import Select from "./components/Select/Select";
@@ -23,6 +24,7 @@ function App() {
             <OnOff on={on} setOn={setOn} />
             <Rating value={value} click={setValue} valueRating={valueRating}/>
             <Select value={select} items={users} onClick={onClickSelect}/>
+            <Clock/>
         </div>
     );
 }
